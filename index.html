@@ -8,35 +8,47 @@
 
   <meta
     name="description"
-    content="WDD 131 – Fundamentos da Web Dinâmica. Página inicial de Lucas da Luz Morais com informações pessoais, links acadêmicos e conteúdos do curso."
+    content="WDD 131 – Fundamentos da Web Dinâmica. Página inicial de Lucas da Luz Morais com informações pessoais, recursos de desenvolvimento web e links acadêmicos."
   >
+
   <meta name="author" content="Lucas da Luz Morais">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="estilos/base.css">
+
   <script src="scripts/obterdatas.js" defer></script>
 </head>
 
 <body>
   <header>
-    <h1>
-      <span>WDD 131</span>
-      Fundamentos da Web Dinâmica
-    </h1>
+    <span id="course-title">
+      WDD 131: Fundamentos da Web Dinâmica
+    </span>
 
     <nav aria-label="Navegação principal">
-      <a href="https://www.linkedin.com/in/llucaslluz/" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.linkedin.com/in/llucaslluz/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         LinkedIn
       </a>
-      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">
+
+      <a
+        href="https://byupw.instructure.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Canvas
       </a>
+
       <a
         href="https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/9?lang=por"
         target="_blank"
@@ -44,7 +56,10 @@
       >
         Escritura
       </a>
-      <a href="projeto/">Projeto Final</a>
+
+      <a href="projeto/">
+        Projeto Final
+      </a>
     </nav>
   </header>
 
@@ -53,52 +68,112 @@
 
     <div class="cards-grid">
       <section class="card sobre-mim">
-        <h2>Sobre mim</h2>
+        <h2>Sobre Mim</h2>
 
         <div class="card-content">
+          <div class="texto-sobre">
+            <p>
+              Meu nome é Lucas da Luz Morais. Moro em São Paulo, Brasil,
+              trabalho com automação industrial e estudo desenvolvimento
+              de sistemas.
+            </p>
+
+            <p>
+              Tenho interesse por tecnologia, programação, manutenção
+              industrial e desenvolvimento web. Neste curso, quero melhorar
+              minhas habilidades em HTML, CSS e JavaScript para criar páginas
+              acessíveis, organizadas e responsivas.
+            </p>
+          </div>
+
           <img
+            class="foto-perfil"
             src="imagens/perfil.jpg"
-            alt="Ilustração com as iniciais LM representando Lucas da Luz Morais"
+            alt="Foto de Lucas da Luz Morais"
             width="220"
             height="220"
           >
+        </div>
 
-          <div>
-            <p>
-              Meu nome é Lucas da Luz Morais. Moro em São Paulo, Brasil, trabalho
-              com automação industrial e estudo desenvolvimento de sistemas.
-            </p>
+        <div class="local-info">
+          <h3>São Paulo, Brasil</h3>
 
-            <p>
-              Tenho interesse por tecnologia, programação, manutenção industrial
-              e desenvolvimento web. Neste curso, quero melhorar minhas habilidades
-              em HTML, CSS e JavaScript para criar páginas acessíveis, organizadas
-              e responsivas.
-            </p>
+          <div class="local-content">
+            <figure>
+              <img
+                src="imagens/sao-paulo.webp"
+                alt="Ilustração do horizonte da cidade de São Paulo"
+                width="360"
+                height="220"
+                loading="lazy"
+              >
+
+              <figcaption>
+                São Paulo, Brasil
+              </figcaption>
+            </figure>
+
+            <div>
+              <p>
+                São Paulo é uma das maiores cidades do Brasil e possui
+                forte presença nos setores de tecnologia, indústria,
+                cultura e educação.
+              </p>
+
+              <ul>
+                <li>País: Brasil</li>
+                <li>Estado: São Paulo</li>
+                <li>Idioma principal: Português</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="card localizacao">
-        <h2>São Paulo, Brasil</h2>
+      <section class="card recursos">
+        <h2>Recursos Web Dev</h2>
 
-        <div class="card-content coluna">
-          <img
-            src="imagens/sao-paulo.webp"
-            alt="Ilustração do horizonte da cidade de São Paulo"
-            width="360"
-            height="220"
-          >
-
-          <p>
-            São Paulo é uma das maiores cidades do Brasil e possui forte presença
-            nos setores de tecnologia, indústria, cultura e educação.
-          </p>
-
+        <div class="recursos-content">
           <ul>
-            <li>País: Brasil</li>
-            <li>Estado: São Paulo</li>
-            <li>Idioma principal: Português</li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/pt-BR/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                MDN Web Docs
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.w3schools.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                W3Schools
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://web.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Web.dev
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://css-tricks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CSS-Tricks
+              </a>
+            </li>
           </ul>
         </div>
       </section>
@@ -107,8 +182,10 @@
 
   <footer>
     <p>
-      &copy; <span id="anoatual"></span> Lucas da Luz Morais | São Paulo, Brasil
+      &copy; <span id="anoatual"></span>
+      Lucas da Luz Morais | São Paulo, Brasil
     </p>
+
     <p id="ultimaModificacao"></p>
   </footer>
 </body>

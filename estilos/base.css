@@ -36,23 +36,17 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  padding: 1.5rem 1rem;
-  font-family: "Merriweather", Georgia, serif;
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-}
-
-header h1 span {
+#course-title {
   display: block;
-  color: var(--dourado);
-  font-size: 0.8em;
-  letter-spacing: 0.08em;
+  padding: 1.4rem 1rem;
+  color: var(--branco);
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.25rem, 3vw, 2rem);
 }
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 0.25rem;
   padding: 0.5rem 1rem;
@@ -122,9 +116,15 @@ main > h1 {
   padding: 1.25rem;
 }
 
-.card-content.coluna {
-  flex-direction: column;
-  align-items: center;
+.texto-sobre {
+  flex: 1;
+}
+
+.foto-perfil {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .card img {
@@ -140,10 +140,62 @@ main > h1 {
   margin-top: 0;
 }
 
+.local-info {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.local-info h3 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--borda);
+  color: var(--azul-escuro);
+  text-align: center;
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.local-content {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.9fr) 1.1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 0.4rem;
+  color: #4f5b66;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 .card ul {
-  width: 100%;
   margin: 0;
   padding-left: 1.4rem;
+}
+
+.recursos-content {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.recursos li {
+  margin: 0.6rem 0;
+}
+
+.recursos a {
+  color: #0645ad;
+  font-weight: 500;
+}
+
+.recursos a:hover,
+.recursos a:focus-visible {
+  color: var(--azul-escuro);
+  text-decoration-thickness: 2px;
 }
 
 footer {
@@ -168,7 +220,9 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .card-content {
+  .card-content,
+  .local-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
