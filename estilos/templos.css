@@ -8,7 +8,8 @@
   --surface-color: #ffffff;
   --text-color: #102a43;
   --light-text-color: #ffffff;
-  --shadow-color: rgb(16 42 67 / 18%);
+  --shadow-color: rgba(16, 42, 67, 0.18);
+  --hover-background: rgba(255, 255, 255, 0.1);
 }
 
 * {
