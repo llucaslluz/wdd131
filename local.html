@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Página responsiva com informações gerais e clima de Cabo Verde."
+  >
+  <meta name="author" content="Lucas da Luz Morais">
+  <title>Cabo Verde | Página do País</title>
+
+  <link rel="stylesheet" href="estilos/local.css">
+  <script src="scripts/local.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Cabo Verde</h1>
+  </header>
+
+  <main class="hero">
+    <picture class="hero-picture">
+      <source
+        srcset="imagens/cabo-verde-grande.webp"
+        media="(min-width: 700px)"
+      >
+      <img
+        src="imagens/cabo-verde-pequeno.webp"
+        alt="Paisagem costeira de Cabo Verde, com mar azul e relevo vulcânico"
+        width="600"
+        height="900"
+      >
+    </picture>
+
+    <section class="info-card data-card" aria-labelledby="dados-title">
+      <h2 id="dados-title">Dados</h2>
+
+      <dl class="information-list">
+        <div>
+          <dt>Área:</dt>
+          <dd>4.033 km²</dd>
+        </div>
+        <div>
+          <dt>População:</dt>
+          <dd>527.326 habitantes</dd>
+        </div>
+        <div>
+          <dt>Capital:</dt>
+          <dd>Praia</dd>
+        </div>
+        <div>
+          <dt>Idiomas:</dt>
+          <dd>Português e crioulo cabo-verdiano</dd>
+        </div>
+        <div>
+          <dt>Moeda:</dt>
+          <dd>Escudo cabo-verdiano</dd>
+        </div>
+        <div>
+          <dt>Fuso horário:</dt>
+          <dd>UTC−1</dd>
+        </div>
+        <div>
+          <dt>Código telefônico:</dt>
+          <dd>+238</dd>
+        </div>
+        <div>
+          <dt>Domínio de internet:</dt>
+          <dd>.cv</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="info-card weather-card" aria-labelledby="clima-title">
+      <h2 id="clima-title" class="weather-title">Clima</h2>
+
+      <img
+        class="weather-icon"
+        src="imagens/clima.svg"
+        alt="Ícone de céu parcialmente nublado"
+        width="96"
+        height="96"
+      >
+
+      <dl class="information-list weather-list">
+        <div>
+          <dt>Temperatura:</dt>
+          <dd><span id="temperature">24</span> °C</dd>
+        </div>
+        <div>
+          <dt>Condições:</dt>
+          <dd>Parcialmente nublado</dd>
+        </div>
+        <div>
+          <dt>Vento:</dt>
+          <dd><span id="wind-speed">18</span> km/h</dd>
+        </div>
+        <div>
+          <dt>Sensação térmica:</dt>
+          <dd id="wind-chill">N/A</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy;<span id="current-year"></span>
+      🌊 Lucas da Luz Morais 🌊 Cabo Verde
+    </p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>
