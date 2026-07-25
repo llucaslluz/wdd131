@@ -1,0 +1,51 @@
+@media screen and (min-width: 700px) {
+  .header-content {
+    flex-wrap: nowrap;
+    min-height: 80px;
+  }
+
+  .site-title {
+    font-size: 1.6rem;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  #navigation,
+  #navigation:not(.open),
+  #navigation.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+    margin-top: 0;
+  }
+
+  #navigation a {
+    border-bottom: none;
+    border-radius: 0.25rem;
+  }
+
+  main {
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .temple-card {
+    padding: 1.1rem;
+  }
+}

@@ -1,112 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta charset="UTF-8">
 
-    <meta
-        name="description"
-        content="Álbum responsivo com informações e imagens de templos."
-    >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    <meta name="author" content="Lucas da Luz Morais">
+  <meta
+    name="description"
+    content="Álbum responsivo com informações e imagens de templos de A Igreja de Jesus Cristo dos Santos dos Últimos Dias."
+  >
 
-    <title>Álbum de Templos</title>
+  <meta
+    name="author"
+    content="Lucas da Luz Morais"
+  >
 
-    <link
-        rel="stylesheet"
-        href="estilos/templos-filtrados.css"
-    >
+  <title>Álbum do Templo</title>
 
-    <script
-        src="scripts/templos-filtrados.js"
-        defer
-    ></script>
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="estilos/templos-filtrados.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="estilos/templos-filtrados-grande.css"
+  >
+
+  <script
+    src="scripts/templos-filtrados.js"
+    defer
+  ></script>
 </head>
 
 <body>
-    <header>
-        <div class="cabecalho">
-            <h1>Álbum de Templos</h1>
+  <header>
+    <div class="header-content">
+      <span class="site-title">Álbum do Templo</span>
 
-            <button
-                id="menu"
-                type="button"
-                aria-label="Abrir menu de navegação"
-                aria-expanded="false"
-            >
-                ☰
-            </button>
-        </div>
+      <button
+        id="menu-button"
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
-        <nav id="navigation" aria-label="Filtros dos templos">
-            <button
-                type="button"
-                class="nav-button active"
-                data-filter="inicio"
-            >
-                Página Inicial
-            </button>
+      <nav
+        id="navigation"
+        aria-label="Navegação principal"
+      >
+        <a
+          id="home"
+          data-filter="home"
+          href="#"
+          aria-current="page"
+        >
+          Página Inicial
+        </a>
 
-            <button
-                type="button"
-                class="nav-button"
-                data-filter="antigos"
-            >
-                Antigos
-            </button>
+        <a
+          id="old"
+          data-filter="old"
+          href="#"
+        >
+          Antigo
+        </a>
 
-            <button
-                type="button"
-                class="nav-button"
-                data-filter="novos"
-            >
-                Novos
-            </button>
+        <a
+          id="new"
+          data-filter="new"
+          href="#"
+        >
+          Novo
+        </a>
 
-            <button
-                type="button"
-                class="nav-button"
-                data-filter="grandes"
-            >
-                Grandes
-            </button>
+        <a
+          id="large"
+          data-filter="large"
+          href="#"
+        >
+          Grande
+        </a>
 
-            <button
-                type="button"
-                class="nav-button"
-                data-filter="pequenos"
-            >
-                Pequenos
-            </button>
-        </nav>
-    </header>
+        <a
+          id="small"
+          data-filter="small"
+          href="#"
+        >
+          Pequeno
+        </a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <h2 id="page-title">Página Inicial</h2>
+  <main>
+    <h1 id="page-title">Templos</h1>
 
-        <!--
-            Os cartões não são escritos aqui.
-            Eles serão criados pelo JavaScript.
-        -->
-        <section
-            id="temple-cards"
-            class="temple-grid"
-            aria-live="polite"
-        ></section>
-    </main>
+    <!-- Os cartões serão criados pelo JavaScript. -->
+    <section
+      id="temple-cards"
+      class="temple-grid"
+      aria-label="Galeria de templos"
+      aria-live="polite"
+    ></section>
+  </main>
 
-    <footer>
-        <p>
-            &copy;
-            <span id="currentyear"></span>
-            | Lucas da Luz Morais | Brasil
-        </p>
+  <footer>
+    <p>
+      &copy;
+      <span id="current-year"></span>
+      | Lucas da Luz Morais | Brasil
+    </p>
 
-        <p id="lastModified"></p>
-    </footer>
+    <p id="last-modified"></p>
+  </footer>
 </body>
 </html>

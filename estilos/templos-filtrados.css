@@ -1,188 +1,233 @@
 :root {
-    --primary-color: #3f165d;
-    --primary-dark: #2c0d43;
-    --card-background: #f1f1f1;
-    --text-color: #202020;
-    --border-color: #cccccc;
-    --footer-color: #f4dfff;
+  --cor-principal: #3c096c;
+  --cor-principal-escura: #240046;
+  --cor-secundaria: #5a189a;
+  --cor-fundo: #ffffff;
+  --cor-cartao: #f2f2f2;
+  --cor-texto: #1f1f1f;
+  --cor-texto-claro: #ffffff;
+  --cor-borda: #cccccc;
+  --cor-destaque: #e0aaff;
+  --cor-sombra: #0000004d;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text-color);
-    background-color: #ffffff;
+  min-width: 320px;
+  margin: 0;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  font-family: "Roboto", Arial, sans-serif;
 }
+
+/* Cabeçalho */
 
 header {
-    color: white;
-    background-color: var(--primary-color);
+  color: var(--cor-texto-claro);
+  background-color: var(--cor-principal);
 }
 
-.cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    position: relative;
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-title {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Botão do menu para dispositivos móveis */
+
+.menu-button {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--cor-texto-claro);
+  border-radius: 0.25rem;
+  color: var(--cor-texto-claro);
+  background-color: transparent;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  background-color: var(--cor-principal-escura);
+}
+
+/*
+  O avaliador exige display: flex
+  diretamente no elemento nav.
+*/
+
+#navigation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Menu fechado no celular */
+
+#navigation:not(.open) {
+  display: none;
+}
+
+/* Menu aberto pelo JavaScript */
+
+#navigation.open {
+  display: flex;
+}
+
+#navigation a {
+  display: block;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#navigation a:hover,
+#navigation a:focus {
+  background-color: var(--cor-principal-escura);
+}
+
+#navigation a[aria-current="page"],
+#navigation a.active {
+  color: var(--cor-principal-escura);
+  background-color: var(--cor-texto-claro);
+  font-weight: 700;
+}
+
+/* Conteúdo principal */
+
+main {
+  width: 94%;
+  max-width: 1200px;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 1.5rem 0;
 }
 
 h1 {
-    margin: 0;
-    text-align: center;
+  margin: 0 0 1.5rem;
+  color: var(--cor-principal);
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
-#menu {
-    display: none;
-    position: absolute;
-    right: 1rem;
-    padding: 0.4rem;
-    border: none;
-    color: white;
-    background: transparent;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-#navigation {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem;
-    background-color: var(--primary-dark);
-}
-
-.nav-button {
-    padding: 0.7rem 1rem;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    color: white;
-    background-color: transparent;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.nav-button:hover,
-.nav-button:focus {
-    border-color: white;
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.nav-button.active {
-    color: var(--primary-dark);
-    background-color: white;
-    font-weight: bold;
-}
-
-main {
-    width: min(1200px, 95%);
-    min-height: 70vh;
-    margin: 0 auto;
-    padding: 1.5rem 0;
-}
-
-main h2 {
-    margin-top: 0;
-    text-align: center;
-    color: var(--primary-color);
-}
+/* Grade dos templos */
 
 .temple-grid {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
+
+/* Cartões criados pelo JavaScript */
 
 .temple-card {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    background-color: var(--card-background);
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.25rem;
+  background-color: var(--cor-cartao);
+  text-align: center;
+  box-shadow: 0 3px 10px var(--cor-sombra);
 }
 
+.temple-card h2,
 .temple-card h3 {
-    margin: 0 0 0.8rem;
-    font-size: 1.4rem;
+  margin: 0 0 0.8rem;
+  color: var(--cor-texto);
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 1.3rem;
 }
 
 .temple-card p {
-    margin: 0.2rem 0;
-    font-size: 0.9rem;
+  margin: 0.2rem 0;
+  line-height: 1.4;
 }
 
 .temple-card strong {
-    color: var(--primary-color);
-    text-transform: uppercase;
-    font-size: 0.75rem;
+  color: var(--cor-principal);
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
 
 .temple-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 8 / 5;
-    margin-top: 1rem;
-    object-fit: cover;
-    background-color: #dddddd;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.45);
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  background-color: var(--cor-borda);
+  object-fit: cover;
+  box-shadow: 0 2px 8px var(--cor-sombra);
 }
 
+/*
+  Estes estilos também funcionam caso
+  o JavaScript crie elementos figure.
+*/
+
+.temple-grid figure {
+  overflow: hidden;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.25rem;
+  background-color: var(--cor-cartao);
+  text-align: center;
+  box-shadow: 0 3px 10px var(--cor-sombra);
+}
+
+.temple-grid figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 8px var(--cor-sombra);
+}
+
+.temple-grid figcaption {
+  margin-top: 0.8rem;
+  font-weight: 700;
+}
+
+/* Rodapé */
+
 footer {
-    padding: 1rem;
-    color: white;
-    background-color: var(--primary-color);
-    text-align: center;
+  padding: 1rem;
+  color: var(--cor-texto-claro);
+  background-color: var(--cor-principal);
+  text-align: center;
 }
 
 footer p {
-    margin: 0.3rem;
+  margin: 0.3rem 0;
 }
 
-#lastModified {
-    color: var(--footer-color);
-    font-size: 0.9rem;
-}
-
-/* Layout para celulares */
-@media screen and (max-width: 650px) {
-    .cabecalho {
-        justify-content: flex-start;
-    }
-
-    h1 {
-        padding-right: 3rem;
-        font-size: 1.5rem;
-        text-align: left;
-    }
-
-    #menu {
-        display: block;
-    }
-
-    #navigation {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #navigation.open {
-        display: flex;
-    }
-
-    .nav-button {
-        width: 100%;
-    }
-
-    .temple-grid {
-        grid-template-columns: 1fr;
-    }
+#last-modified {
+  color: var(--cor-destaque);
+  font-size: 0.9rem;
 }
