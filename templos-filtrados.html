@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Álbum responsivo com informações e imagens de templos."
+    >
+
+    <meta name="author" content="Lucas da Luz Morais">
+
+    <title>Álbum de Templos</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos/templos-filtrados.css"
+    >
+
+    <script
+        src="scripts/templos-filtrados.js"
+        defer
+    ></script>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <h1>Álbum de Templos</h1>
+
+            <button
+                id="menu"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+        </div>
+
+        <nav id="navigation" aria-label="Filtros dos templos">
+            <button
+                type="button"
+                class="nav-button active"
+                data-filter="inicio"
+            >
+                Página Inicial
+            </button>
+
+            <button
+                type="button"
+                class="nav-button"
+                data-filter="antigos"
+            >
+                Antigos
+            </button>
+
+            <button
+                type="button"
+                class="nav-button"
+                data-filter="novos"
+            >
+                Novos
+            </button>
+
+            <button
+                type="button"
+                class="nav-button"
+                data-filter="grandes"
+            >
+                Grandes
+            </button>
+
+            <button
+                type="button"
+                class="nav-button"
+                data-filter="pequenos"
+            >
+                Pequenos
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="page-title">Página Inicial</h2>
+
+        <!--
+            Os cartões não são escritos aqui.
+            Eles serão criados pelo JavaScript.
+        -->
+        <section
+            id="temple-cards"
+            class="temple-grid"
+            aria-live="polite"
+        ></section>
+    </main>
+
+    <footer>
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            | Lucas da Luz Morais | Brasil
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
