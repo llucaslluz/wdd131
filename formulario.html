@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Formulário de avaliação de produtos desenvolvido para o curso WDD 131."
+  >
+  <meta name="author" content="Lucas da Luz Morais">
+
+  <title>Avaliação de Produto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="estilos/formulario.css">
+
+  <script src="scripts/formulario.js" defer></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Avaliação de Produto</h1>
+
+    <p>
+      Compartilhe sua experiência com um dos nossos produtos.
+    </p>
+  </header>
+
+  <main>
+    <form
+      class="review-form"
+      method="get"
+      action="avaliacao.html"
+    >
+      <fieldset>
+        <legend>Informações do produto</legend>
+
+        <div class="form-group">
+          <label for="produto">
+            Nome do Produto
+            <span class="required">*</span>
+          </label>
+
+          <select
+            id="produto"
+            name="produto"
+            required
+          >
+            <option value="" disabled selected>
+              Selecione um Produto...
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p class="field-label">
+            Classificação Geral
+            <span class="required">*</span>
+          </p>
+
+          <div
+            class="rating-group"
+            role="radiogroup"
+            aria-label="Classificação geral do produto"
+          >
+            <div class="rating-option">
+              <label for="estrela1" aria-label="1 estrela">
+                <span class="stars">☆</span>
+                <span class="rating-number">1</span>
+              </label>
+
+              <input
+                type="radio"
+                id="estrela1"
+                name="classificacao"
+                value="1"
+                required
+              >
+            </div>
+
+            <div class="rating-option">
+              <label for="estrela2" aria-label="2 estrelas">
+                <span class="stars">☆☆</span>
+                <span class="rating-number">2</span>
+              </label>
+
+              <input
+                type="radio"
+                id="estrela2"
+                name="classificacao"
+                value="2"
+                required
+              >
+            </div>
+
+            <div class="rating-option">
+              <label for="estrela3" aria-label="3 estrelas">
+                <span class="stars">☆☆☆</span>
+                <span class="rating-number">3</span>
+              </label>
+
+              <input
+                type="radio"
+                id="estrela3"
+                name="classificacao"
+                value="3"
+                required
+              >
+            </div>
+
+            <div class="rating-option">
+              <label for="estrela4" aria-label="4 estrelas">
+                <span class="stars">☆☆☆☆</span>
+                <span class="rating-number">4</span>
+              </label>
+
+              <input
+                type="radio"
+                id="estrela4"
+                name="classificacao"
+                value="4"
+                required
+              >
+            </div>
+
+            <div class="rating-option">
+              <label for="estrela5" aria-label="5 estrelas">
+                <span class="stars">☆☆☆☆☆</span>
+                <span class="rating-number">5</span>
+              </label>
+
+              <input
+                type="radio"
+                id="estrela5"
+                name="classificacao"
+                value="5"
+                required
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="data-instalacao">
+            Data de Instalação
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="date"
+            id="data-instalacao"
+            name="dataInstalacao"
+            required
+          >
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Detalhes da avaliação</legend>
+
+        <div class="form-group">
+          <p class="field-label">
+            Quais recursos você achou úteis no produto?
+          </p>
+
+          <p class="instruction">
+            Marque todas as opções aplicáveis.
+          </p>
+
+          <div class="checkbox-group">
+            <label class="checkbox-option" for="durabilidade">
+              <input
+                type="checkbox"
+                id="durabilidade"
+                name="recursos"
+                value="durabilidade"
+              >
+
+              <span>Durabilidade</span>
+            </label>
+
+            <label class="checkbox-option" for="facilidade">
+              <input
+                type="checkbox"
+                id="facilidade"
+                name="recursos"
+                value="facilidade-de-uso"
+              >
+
+              <span>Facilidade de Uso</span>
+            </label>
+
+            <label class="checkbox-option" for="desempenho">
+              <input
+                type="checkbox"
+                id="desempenho"
+                name="recursos"
+                value="desempenho"
+              >
+
+              <span>Desempenho</span>
+            </label>
+
+            <label class="checkbox-option" for="design">
+              <input
+                type="checkbox"
+                id="design"
+                name="recursos"
+                value="design"
+              >
+
+              <span>Design</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="avaliacao-escrita">
+            Avaliação Escrita
+            <span class="optional">(Opcional)</span>
+          </label>
+
+          <textarea
+            id="avaliacao-escrita"
+            name="avaliacaoEscrita"
+            rows="7"
+            placeholder="Conte como foi sua experiência com o produto..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="nome-usuario">
+            Seu Nome
+            <span class="optional">(Opcional)</span>
+          </label>
+
+          <input
+            type="text"
+            id="nome-usuario"
+            name="nomeUsuario"
+            autocomplete="name"
+            placeholder="Digite seu nome"
+          >
+        </div>
+      </fieldset>
+
+      <p class="required-message">
+        <span class="required">*</span>
+        Campos obrigatórios
+      </p>
+
+      <input
+        class="submit-button"
+        type="submit"
+        value="Publicar Avaliação"
+      >
+    </form>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="current-year"></span>
+      🌸 Lucas da Luz Morais 🌸
+    </p>
+
+    <p>
+      Última modificação:
+      <span id="last-modified"></span>
+    </p>
+  </footer>
+</body>
+</html>
