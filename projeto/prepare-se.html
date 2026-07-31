@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Orientações, checklist e formulário de manifestação de interesse para o Festival de Artes da Estaca Pirituba."
+  >
+  <meta name="author" content="Lucas da Luz Morais">
+  <title>Prepare-se | Festival de Artes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles/festival.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/preparacao.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Página inicial do Festival de Artes">
+        <span class="brand-symbol" aria-hidden="true">FA</span>
+        <span class="brand-name">
+          <strong>Festival de Artes</strong>
+          <small>Estaca Pirituba</small>
+        </span>
+      </a>
+
+      <button
+        id="menu-button"
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav
+        id="main-navigation"
+        class="main-navigation"
+        aria-label="Navegação principal"
+      >
+        <a href="index.html">Início</a>
+        <a href="programacao.html">Programação</a>
+        <a class="active" href="prepare-se.html" aria-current="page">
+          Prepare-se
+        </a>
+        <a class="nav-cta" href="#formulario-interesse">
+          Quero participar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="index.html">Início</a>
+          <span aria-hidden="true">/</span>
+          <span>Prepare-se</span>
+        </nav>
+
+        <p class="eyebrow hero-eyebrow">Jovens e líderes</p>
+        <h1>Prepare-se para o Festival</h1>
+        <p>
+          Consulte as orientações, acompanhe sua lista de preparação e
+          manifeste interesse em colaborar com a apresentação da sua ala.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Participação</p>
+          <h2>Há diferentes maneiras de ajudar</h2>
+          <p>
+            O festival precisa de pessoas no palco, nos bastidores, na
+            tecnologia e na organização. Cada jovem poderá contribuir de
+            acordo com seus talentos, interesses e disponibilidade.
+          </p>
+        </div>
+
+        <div class="page-card-grid">
+          <article class="page-card">
+            <h3>Palco</h3>
+            <p>
+              Atuação, dança, canto, narração, instrumentos e expressão
+              corporal.
+            </p>
+          </article>
+
+          <article class="page-card">
+            <h3>Bastidores</h3>
+            <p>
+              Roteiro, direção, figurino, maquiagem, cenário e movimentação de
+              materiais.
+            </p>
+          </article>
+
+          <article class="page-card">
+            <h3>Tecnologia e organização</h3>
+            <p>
+              Áudio, projeção, iluminação, fotografia, recepção e apoio geral.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section operation-section">
+      <div class="container two-columns">
+        <div>
+          <p class="eyebrow">Orientações para jovens</p>
+          <h2>Como se preparar</h2>
+
+          <ul class="leaders-list">
+            <li>Converse com os líderes da sua ala sobre como participar.</li>
+            <li>Escolha uma função compatível com seus interesses.</li>
+            <li>Participe dos ensaios e reuniões de planejamento.</li>
+            <li>Chegue no horário combinado e permaneça com sua equipe.</li>
+            <li>Prepare figurinos, objetos e materiais com antecedência.</li>
+            <li>Respeite as orientações de segurança e organização.</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow">Orientações para líderes</p>
+          <h2>Informações da apresentação</h2>
+
+          <ul class="leaders-list">
+            <li>Nome, tipo e breve descrição da apresentação.</li>
+            <li>Duração máxima de 20 minutos.</li>
+            <li>Responsável geral e quantidade de participantes.</li>
+            <li>Músicas, vídeos e arquivos utilizados.</li>
+            <li>Responsável pela tecnologia e pelo som.</li>
+            <li>Equipamentos, cenários e materiais necessários.</li>
+            <li>Tempo estimado para montagem e retirada.</li>
+            <li>Necessidades de microfone, projeção e iluminação.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section checklist-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Lista interativa</p>
+          <h2>Meu checklist de preparação</h2>
+          <p>
+            As tarefas marcadas ficam salvas neste navegador usando
+            localStorage.
+          </p>
+        </div>
+
+        <div class="checklist-box">
+          <div class="progress-wrapper">
+            <div class="progress-label">
+              <span>Progresso</span>
+              <span id="progress-text">0 de 8 tarefas concluídas (0%).</span>
+            </div>
+
+            <div class="progress-track">
+              <div
+                id="progress-bar"
+                class="progress-bar"
+                role="progressbar"
+                aria-label="Progresso do checklist"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+              ></div>
+            </div>
+          </div>
+
+          <ul id="preparation-checklist" class="checklist"></ul>
+
+          <div class="checklist-actions">
+            <button
+              id="reset-checklist"
+              class="button button-secondary"
+              type="button"
+            >
+              Limpar checklist
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formulario-interesse" class="content-section form-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Manifestação de interesse</p>
+          <h2>Conte como você gostaria de participar</h2>
+          <p>
+            Este formulário registra uma manifestação de interesse. A
+            participação deverá ser confirmada posteriormente com os líderes da
+            sua ala.
+          </p>
+        </div>
+
+        <form
+          id="interest-form"
+          class="interest-form"
+          method="get"
+          action="confirmacao.html"
+        >
+          <input type="hidden" id="registration-id" name="registrationId">
+          <input type="hidden" id="registration-date" name="registrationDate">
+
+          <p id="restored-message" class="form-message" hidden></p>
+
+          <fieldset>
+            <legend>Informações pessoais</legend>
+
+            <div class="form-grid two">
+              <div class="form-control">
+                <label for="name">
+                  Nome
+                  <span class="optional">(opcional)</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Digite seu nome"
+                >
+              </div>
+
+              <div class="form-control">
+                <label for="ward">
+                  Ala
+                  <span class="required">*</span>
+                </label>
+                <select id="ward" name="ward" required>
+                  <option value="" disabled selected>Selecione sua ala...</option>
+                  <option value="Jaraguá">Jaraguá</option>
+                  <option value="São Domingos">São Domingos</option>
+                  <option value="Vista Verde">Vista Verde</option>
+                  <option value="Freguesia do Ó">Freguesia do Ó</option>
+                  <option value="Pirituba">Pirituba</option>
+                  <option value="Visitante">Visitante</option>
+                </select>
+              </div>
+
+              <div class="form-control">
+                <label for="participant-type">
+                  Tipo de participante
+                  <span class="required">*</span>
+                </label>
+                <select
+                  id="participant-type"
+                  name="participantType"
+                  required
+                >
+                  <option value="" disabled selected>Selecione uma opção...</option>
+                  <option value="jovem">Jovem</option>
+                  <option value="lider">Líder</option>
+                  <option value="familiar">Familiar ou visitante</option>
+                </select>
+              </div>
+
+              <div
+                id="leadership-field"
+                class="form-control conditional-field"
+                hidden
+              >
+                <label for="leadership-role">
+                  Função de liderança
+                  <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="leadership-role"
+                  name="leadershipRole"
+                  placeholder="Ex.: líder dos Rapazes, líder das Moças"
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Forma de participação</legend>
+
+            <div class="form-control">
+              <p>
+                Como você gostaria de ajudar?
+                <span class="required">*</span>
+              </p>
+
+              <div class="radio-group">
+                <label class="choice">
+                  <input
+                    type="radio"
+                    name="preferredRole"
+                    value="palco"
+                    required
+                  >
+                  <span>Apresentação no palco</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="radio"
+                    name="preferredRole"
+                    value="bastidores"
+                  >
+                  <span>Apoio nos bastidores</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="radio"
+                    name="preferredRole"
+                    value="tecnologia"
+                  >
+                  <span>Tecnologia, áudio ou projeção</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="radio"
+                    name="preferredRole"
+                    value="organizacao"
+                  >
+                  <span>Organização e apoio geral</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="radio"
+                    name="preferredRole"
+                    value="figurino"
+                  >
+                  <span>Figurino, maquiagem ou cenário</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="radio"
+                    name="preferredRole"
+                    value="aindaNaoSei"
+                  >
+                  <span>Ainda não decidi</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Disponibilidade e observações</legend>
+
+            <div class="form-control">
+              <p>
+                Quando você costuma ter disponibilidade?
+                <span class="optional">(marque todas que se aplicam)</span>
+              </p>
+
+              <div class="checkbox-group">
+                <label class="choice">
+                  <input
+                    type="checkbox"
+                    name="availability"
+                    value="semana"
+                  >
+                  <span>Dias de semana</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="checkbox"
+                    name="availability"
+                    value="sabado"
+                  >
+                  <span>Sábados</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="checkbox"
+                    name="availability"
+                    value="domingo"
+                  >
+                  <span>Domingos</span>
+                </label>
+
+                <label class="choice">
+                  <input
+                    type="checkbox"
+                    name="availability"
+                    value="combinar"
+                  >
+                  <span>A combinar</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-control form-control-spaced">
+              <label for="message">
+                Observação
+                <span class="optional">(opcional)</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Conte sobre seus talentos, interesses ou necessidades."
+              ></textarea>
+              <p class="form-help">
+                Não inclua informações pessoais sensíveis.
+              </p>
+            </div>
+          </fieldset>
+
+          <p>
+            <span class="required">*</span>
+            Campos obrigatórios
+          </p>
+
+          <div class="submit-row">
+            <button class="button button-primary" type="submit">
+              Enviar manifestação
+            </button>
+
+            <a class="button button-secondary" href="programacao.html">
+              Consultar programação
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-symbol" aria-hidden="true">FA</span>
+          <span class="brand-name">
+            <strong>Festival de Artes</strong>
+            <small>Estaca Pirituba</small>
+          </span>
+        </a>
+        <p>Uma noite de criatividade, aprendizado, crescimento e união.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <h2>Navegação</h2>
+        <a href="index.html">Início</a>
+        <a href="programacao.html">Programação</a>
+        <a href="prepare-se.html">Prepare-se</a>
+        <a href="referencias.html">Referências</a>
+      </nav>
+
+      <div class="footer-info">
+        <h2>Informações</h2>
+        <p>7 de novembro de 2026</p>
+        <p>Das 19h às 22h</p>
+        <p>Sede da Estaca Pirituba</p>
+        <p>Entrada aberta para todos</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>
+          &copy; <span class="current-year"></span>
+          | Lucas da Luz Morais | WDD 131
+        </p>
+        <p>
+          Última modificação:
+          <span class="last-modified"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

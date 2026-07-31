@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Programação preliminar do Festival de Artes da Estaca Pirituba."
+  >
+  <meta name="author" content="Lucas da Luz Morais">
+  <title>Programação | Festival de Artes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles/festival.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/programacao.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Página inicial do Festival de Artes">
+        <span class="brand-symbol" aria-hidden="true">FA</span>
+        <span class="brand-name">
+          <strong>Festival de Artes</strong>
+          <small>Estaca Pirituba</small>
+        </span>
+      </a>
+
+      <button
+        id="menu-button"
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav
+        id="main-navigation"
+        class="main-navigation"
+        aria-label="Navegação principal"
+      >
+        <a href="index.html">Início</a>
+        <a class="active" href="programacao.html" aria-current="page">
+          Programação
+        </a>
+        <a href="prepare-se.html">Prepare-se</a>
+        <a class="nav-cta" href="prepare-se.html#formulario-interesse">
+          Quero participar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação">
+          <a href="index.html">Início</a>
+          <span aria-hidden="true">/</span>
+          <span>Programação</span>
+        </nav>
+
+        <p class="eyebrow hero-eyebrow">7 de novembro de 2026</p>
+        <h1>Programação do Festival</h1>
+        <p>
+          Consulte os horários planejados para a abertura, as cinco
+          apresentações, os intervalos técnicos e o encerramento. Os nomes das
+          alas serão atualizados após o sorteio realizado com os bispos.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="notice notice-bottom">
+          <h2>Programação preliminar</h2>
+          <p>
+            Cada apresentação terá até 20 minutos. Entre as apresentações
+            haverá 10 minutos para retirada dos materiais e preparação do palco.
+          </p>
+        </div>
+
+        <div class="filter-panel" aria-label="Filtros da programação">
+          <div class="form-control">
+            <label for="type-filter">Filtrar por tipo</label>
+            <select id="type-filter">
+              <option value="todos">Todos os itens</option>
+              <option value="cerimonia">Cerimônia</option>
+              <option value="apresentacao">Apresentações</option>
+              <option value="intervalo">Intervalos técnicos</option>
+              <option value="encerramento">Encerramento</option>
+              <option value="organizacao">Organização</option>
+            </select>
+          </div>
+
+          <div class="form-control">
+            <label for="schedule-search">Pesquisar na programação</label>
+            <input
+              type="search"
+              id="schedule-search"
+              placeholder="Ex.: apresentação, oração ou intervalo"
+            >
+          </div>
+
+          <button id="clear-filters" class="button button-secondary" type="button">
+            Limpar filtros
+          </button>
+        </div>
+
+        <p id="results-summary" class="results-summary" aria-live="polite"></p>
+
+        <div id="program-container" class="program-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="content-section operation-section">
+      <div class="container two-columns">
+        <div>
+          <p class="eyebrow">Organização das alas</p>
+          <h2>Como usar os intervalos de 10 minutos</h2>
+          <p>
+            Os primeiros minutos serão utilizados pela ala que terminou sua
+            apresentação para retirar cenários, objetos e equipamentos. Em
+            seguida, a próxima ala organizará o palco e fará os ajustes
+            essenciais.
+          </p>
+          <p>
+            A próxima equipe deverá permanecer reunida e pronta antes do fim da
+            apresentação anterior. Os arquivos de áudio e vídeo devem estar
+            identificados e testados.
+          </p>
+        </div>
+
+        <div class="purpose-card">
+          <p class="eyebrow hero-eyebrow">Regra principal</p>
+          <h3>20 minutos de apresentação + 10 minutos de transição</h3>
+          <p>
+            Esse formato permite que as cinco alas participem com segurança e
+            mantém uma margem final para pequenos atrasos e organização do
+            espaço.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="program-dialog" class="program-dialog">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <div id="dialog-body"></div>
+        <button
+          id="dialog-close"
+          class="dialog-close"
+          type="button"
+          aria-label="Fechar detalhes"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-symbol" aria-hidden="true">FA</span>
+          <span class="brand-name">
+            <strong>Festival de Artes</strong>
+            <small>Estaca Pirituba</small>
+          </span>
+        </a>
+        <p>Uma noite de criatividade, aprendizado, crescimento e união.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <h2>Navegação</h2>
+        <a href="index.html">Início</a>
+        <a href="programacao.html">Programação</a>
+        <a href="prepare-se.html">Prepare-se</a>
+        <a href="referencias.html">Referências</a>
+      </nav>
+
+      <div class="footer-info">
+        <h2>Informações</h2>
+        <p>7 de novembro de 2026</p>
+        <p>Das 19h às 22h</p>
+        <p>Sede da Estaca Pirituba</p>
+        <p>Entrada aberta para todos</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>
+          &copy; <span class="current-year"></span>
+          | Lucas da Luz Morais | WDD 131
+        </p>
+        <p>
+          Última modificação:
+          <span class="last-modified"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
