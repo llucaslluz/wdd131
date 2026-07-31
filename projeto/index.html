@@ -4,27 +4,622 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Projeto Final - WDD 131</title>
-
   <meta
     name="description"
-    content="Espaço reservado para o projeto final do curso WDD 131 de Lucas da Luz Morais."
+    content="Site informativo do Festival de Artes da Estaca Pirituba, que acontecerá em 7 de novembro de 2026."
+  >
+  <meta name="author" content="Lucas da Luz Morais">
+
+  <title>Festival de Artes | Estaca Pirituba</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
   >
 
-  <meta name="author" content="Lucas da Luz Morais">
+  <link rel="stylesheet" href="styles/festival.css">
+
+  <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
-  <main>
-    <h1>Projeto Final</h1>
+  <a class="skip-link" href="#main-content">
+    Ir para o conteúdo principal
+  </a>
 
-    <p>
-      Esta página será desenvolvida durante o curso WDD 131.
-    </p>
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html" aria-label="Página inicial do Festival de Artes">
+        <span class="brand-symbol" aria-hidden="true">FA</span>
 
-    <p>
-      <a href="../">Voltar para a página inicial</a>
-    </p>
+        <span class="brand-name">
+          <strong>Festival de Artes</strong>
+          <small>Estaca Pirituba</small>
+        </span>
+      </a>
+
+      <button
+        id="menu-button"
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav
+        id="main-navigation"
+        class="main-navigation"
+        aria-label="Navegação principal"
+      >
+        <a class="active" href="index.html" aria-current="page">
+          Início
+        </a>
+
+        <a href="programacao.html">
+          Programação
+        </a>
+
+        <a href="prepare-se.html">
+          Prepare-se
+        </a>
+
+        <a class="navigation-highlight" href="prepare-se.html#formulario-interesse">
+          Quero participar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-decoration hero-decoration-one" aria-hidden="true"></div>
+      <div class="hero-decoration hero-decoration-two" aria-hidden="true"></div>
+
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow">
+            Uma noite de criatividade, crescimento e união
+          </p>
+
+          <h1>
+            Festival de Artes da Estaca Pirituba
+          </h1>
+
+          <p class="hero-description">
+            Jovens e líderes unidos para criar, aprender e compartilhar
+            talentos por meio da música, do teatro, da dança e de outras
+            manifestações artísticas.
+          </p>
+
+          <div class="hero-information" aria-label="Informações principais do evento">
+            <div>
+              <span class="information-label">Data</span>
+              <strong>7 de novembro de 2026</strong>
+            </div>
+
+            <div>
+              <span class="information-label">Horário</span>
+              <strong>Das 19h às 22h</strong>
+            </div>
+
+            <div>
+              <span class="information-label">Local</span>
+              <strong>Sede da Estaca Pirituba</strong>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="programacao.html">
+              Ver programação
+            </a>
+
+            <a
+              class="button button-outline"
+              href="prepare-se.html#formulario-interesse"
+            >
+              Quero participar
+            </a>
+          </div>
+
+          <p class="hero-note">
+            Entrada aberta para jovens, líderes, familiares e visitantes.
+          </p>
+        </div>
+
+        <aside class="countdown-card" aria-labelledby="countdown-title">
+          <span class="countdown-icon" aria-hidden="true">✦</span>
+
+          <p class="eyebrow">Prepare-se</p>
+
+          <h2 id="countdown-title">
+            Contagem regressiva
+          </h2>
+
+          <div
+            id="countdown"
+            class="countdown"
+            aria-live="polite"
+          >
+            <div>
+              <strong id="countdown-days">00</strong>
+              <span>Dias</span>
+            </div>
+
+            <div>
+              <strong id="countdown-hours">00</strong>
+              <span>Horas</span>
+            </div>
+
+            <div>
+              <strong id="countdown-minutes">00</strong>
+              <span>Minutos</span>
+            </div>
+
+            <div>
+              <strong id="countdown-seconds">00</strong>
+              <span>Segundos</span>
+            </div>
+          </div>
+
+          <p id="event-status" class="event-status">
+            Calculando o tempo restante...
+          </p>
+
+          <div class="theme-status">
+            <span aria-hidden="true">🎪</span>
+
+            <div>
+              <strong>Tema em definição</strong>
+              <p>
+                “Circo” é a principal proposta, mas ainda não foi confirmado.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="quick-information" aria-label="Resumo do evento">
+      <div class="section-container quick-information-grid">
+        <article class="quick-card">
+          <span class="quick-icon" aria-hidden="true">📅</span>
+
+          <div>
+            <h2>Data</h2>
+            <p>7 de novembro de 2026</p>
+          </div>
+        </article>
+
+        <article class="quick-card">
+          <span class="quick-icon" aria-hidden="true">🕖</span>
+
+          <div>
+            <h2>Horário</h2>
+            <p>Das 19h às 22h</p>
+          </div>
+        </article>
+
+        <article class="quick-card">
+          <span class="quick-icon" aria-hidden="true">📍</span>
+
+          <div>
+            <h2>Local</h2>
+            <p>Sede da Estaca Pirituba</p>
+          </div>
+        </article>
+
+        <article class="quick-card">
+          <span class="quick-icon" aria-hidden="true">🎟️</span>
+
+          <div>
+            <h2>Entrada</h2>
+            <p>Aberta para todos</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section about-section">
+      <div class="section-container two-column-section">
+        <div class="section-content">
+          <p class="eyebrow">Sobre o festival</p>
+
+          <h2>Arte, aprendizado e união</h2>
+
+          <p>
+            O Festival de Artes da Estaca Pirituba será uma noite de
+            apresentações preparadas pelos jovens e líderes das alas
+            participantes.
+          </p>
+
+          <p>
+            Cada ala desenvolverá uma produção artística envolvendo
+            criatividade, planejamento, colaboração e diferentes formas de
+            expressão.
+          </p>
+
+          <p>
+            As apresentações poderão incluir teatro, música, dança, expressão
+            corporal, cenografia, figurinos e outras manifestações artísticas.
+          </p>
+
+          <p>
+            Mais do que realizar um espetáculo, o festival tem o propósito de
+            proporcionar experiências que ajudem os jovens a crescer
+            espiritual, intelectual, social e fisicamente.
+          </p>
+        </div>
+
+        <div class="purpose-card">
+          <span class="purpose-symbol" aria-hidden="true">✦</span>
+
+          <p class="eyebrow">Nosso propósito</p>
+
+          <h3>
+            Desenvolver talentos e fortalecer relacionamentos
+          </h3>
+
+          <p>
+            A preparação para o festival incentivará os jovens a descobrir
+            novas habilidades, assumir responsabilidades, trabalhar em equipe
+            e criar algo significativo.
+          </p>
+
+          <blockquote>
+            “Existe um lugar para cada jovem, dentro ou fora do palco.”
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section growth-section">
+      <div class="section-container">
+        <div class="section-heading centered-heading">
+          <p class="eyebrow">Crescimento pessoal</p>
+
+          <h2>As quatro áreas de desenvolvimento</h2>
+
+          <p>
+            A preparação e a participação no festival poderão proporcionar
+            experiências nas quatro áreas de crescimento dos jovens.
+          </p>
+        </div>
+
+        <div
+          id="growth-areas"
+          class="growth-grid"
+          aria-live="polite"
+        ></div>
+      </div>
+    </section>
+
+    <section class="content-section operation-section">
+      <div class="section-container">
+        <div class="section-heading">
+          <p class="eyebrow">Organização do evento</p>
+
+          <h2>Como funcionará o Festival de Artes?</h2>
+
+          <p>
+            Cinco alas participarão do evento. Cada uma preparará uma
+            apresentação artística e terá um período determinado para utilizar
+            o palco.
+          </p>
+        </div>
+
+        <div class="wards-container" aria-label="Alas participantes">
+          <span>Jaraguá</span>
+          <span>São Domingos</span>
+          <span>Vista Verde</span>
+          <span>Freguesia do Ó</span>
+          <span>Pirituba</span>
+        </div>
+
+        <div class="rules-grid">
+          <article class="rule-card">
+            <span class="rule-number">01</span>
+
+            <h3>Tempo de apresentação</h3>
+
+            <p>
+              Cada ala terá até <strong>20 minutos</strong> para realizar sua
+              apresentação artística.
+            </p>
+          </article>
+
+          <article class="rule-card">
+            <span class="rule-number">02</span>
+
+            <h3>Troca de palco</h3>
+
+            <p>
+              Entre as apresentações haverá um intervalo máximo de
+              <strong>10 minutos</strong>.
+            </p>
+          </article>
+
+          <article class="rule-card">
+            <span class="rule-number">03</span>
+
+            <h3>Organização do intervalo</h3>
+
+            <p>
+              Aproximadamente 5 minutos serão destinados à retirada dos
+              materiais e 5 minutos à preparação da próxima ala.
+            </p>
+          </article>
+
+          <article class="rule-card">
+            <span class="rule-number">04</span>
+
+            <h3>Ordem das alas</h3>
+
+            <p>
+              A ordem das apresentações será definida por sorteio realizado
+              com os bispos.
+            </p>
+          </article>
+        </div>
+
+        <div class="important-guidance">
+          <span class="guidance-icon" aria-hidden="true">!</span>
+
+          <div>
+            <h3>Preparação antecipada</h3>
+
+            <p>
+              Cenários, figurinos, músicas, vídeos e equipamentos deverão estar
+              previamente organizados. A próxima ala deverá permanecer
+              preparada e próxima ao palco antes do encerramento da
+              apresentação anterior.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section schedule-section">
+      <div class="section-container">
+        <div class="schedule-heading">
+          <div class="section-heading">
+            <p class="eyebrow">Programação preliminar</p>
+
+            <h2>Uma noite planejada para todos participarem</h2>
+
+            <p>
+              A programação será atualizada com os nomes das alas depois do
+              sorteio realizado com os bispos.
+            </p>
+          </div>
+
+          <a class="text-link" href="programacao.html">
+            Ver programação completa
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div
+          id="schedule-preview"
+          class="schedule-list"
+          aria-live="polite"
+        ></div>
+
+        <p class="schedule-observation">
+          Entre cada apresentação haverá um intervalo de 10 minutos para
+          desmontagem e preparação do palco.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section participation-section">
+      <div class="section-container">
+        <div class="section-heading centered-heading">
+          <p class="eyebrow">Participação dos jovens</p>
+
+          <h2>Existe um lugar para cada jovem</h2>
+
+          <p>
+            Participar do festival não significa necessariamente atuar no
+            palco. Cada jovem poderá colaborar de acordo com seus interesses,
+            talentos e habilidades.
+          </p>
+        </div>
+
+        <div class="participation-layout">
+          <div class="roles-container">
+            <span>Atuação</span>
+            <span>Música</span>
+            <span>Dança</span>
+            <span>Roteiro</span>
+            <span>Direção</span>
+            <span>Figurino</span>
+            <span>Maquiagem artística</span>
+            <span>Cenário</span>
+            <span>Organização</span>
+            <span>Iluminação</span>
+            <span>Projeção</span>
+            <span>Áudio</span>
+            <span>Fotografia</span>
+            <span>Bastidores</span>
+          </div>
+
+          <article class="participation-card">
+            <span class="participation-icon" aria-hidden="true">★</span>
+
+            <h3>Descubra como você pode colaborar</h3>
+
+            <p>
+              Informe sua ala, seus interesses e a forma como gostaria de
+              participar. A manifestação de interesse ajudará os líderes a
+              organizar as equipes.
+            </p>
+
+            <a
+              class="button button-primary"
+              href="prepare-se.html#formulario-interesse"
+            >
+              Manifestar interesse
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section leaders-section">
+      <div class="section-container two-column-section">
+        <div class="section-content">
+          <p class="eyebrow">Orientação para líderes</p>
+
+          <h2>Informações que cada ala deverá enviar</h2>
+
+          <p>
+            Até o final de agosto, cada ala deverá encaminhar as informações
+            necessárias para o planejamento e a organização do festival.
+          </p>
+
+          <ul class="leaders-list">
+            <li>Nome e tipo da apresentação.</li>
+            <li>Breve descrição e duração estimada.</li>
+            <li>Nome do responsável geral.</li>
+            <li>Quantidade de participantes.</li>
+            <li>Músicas, áudios e vídeos utilizados.</li>
+            <li>Responsável pela tecnologia e pelo som.</li>
+            <li>Equipamentos e materiais necessários.</li>
+            <li>Tempo estimado de preparação e retirada.</li>
+            <li>Necessidades de microfone, projeção ou iluminação.</li>
+          </ul>
+
+          <a class="button button-secondary" href="prepare-se.html">
+            Ver todas as orientações
+          </a>
+        </div>
+
+        <aside class="deadline-card">
+          <span class="deadline-icon" aria-hidden="true">📋</span>
+
+          <p class="eyebrow">Prazo importante</p>
+
+          <h3>Final de agosto</h3>
+
+          <p>
+            As informações de cada apresentação deverão ser enviadas até o
+            encerramento do mês de agosto.
+          </p>
+
+          <div class="deadline-detail">
+            <strong>Responsável técnico</strong>
+
+            <span>
+              Cada ala deverá indicar uma pessoa responsável por músicas,
+              vídeos, projeções, microfones e comunicação com a equipe de som.
+            </span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section update-section">
+      <div class="section-container">
+        <article class="update-card">
+          <span class="update-icon" aria-hidden="true">i</span>
+
+          <div>
+            <p class="eyebrow">Informações em atualização</p>
+
+            <h2>Tema e ordem das apresentações</h2>
+
+            <p>
+              O tema oficial do festival e a ordem das alas ainda estão em
+              definição. A ordem será sorteada com os bispos e publicada assim
+              que estiver confirmada.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-call">
+      <div class="section-container final-call-content">
+        <p class="eyebrow hero-eyebrow">7 de novembro de 2026</p>
+
+        <h2>Prepare-se para fazer parte dessa noite</h2>
+
+        <p>
+          Converse com os líderes da sua ala, descubra como você pode ajudar e
+          acompanhe as próximas informações sobre o Festival de Artes.
+        </p>
+
+        <div class="final-call-actions">
+          <a
+            class="button button-primary"
+            href="prepare-se.html#formulario-interesse"
+          >
+            Quero participar
+          </a>
+
+          <a class="button button-outline" href="programacao.html">
+            Ver programação
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="section-container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="brand-symbol" aria-hidden="true">FA</span>
+
+          <span class="brand-name">
+            <strong>Festival de Artes</strong>
+            <small>Estaca Pirituba</small>
+          </span>
+        </a>
+
+        <p>
+          Uma noite de criatividade, aprendizado, crescimento e união.
+        </p>
+      </div>
+
+      <nav class="footer-navigation" aria-label="Navegação do rodapé">
+        <h2>Navegação</h2>
+
+        <a href="index.html">Início</a>
+        <a href="programacao.html">Programação</a>
+        <a href="prepare-se.html">Prepare-se</a>
+        <a href="referencias.html">Referências</a>
+      </nav>
+
+      <div class="footer-event">
+        <h2>Informações</h2>
+
+        <p>7 de novembro de 2026</p>
+        <p>Das 19h às 22h</p>
+        <p>Sede da Estaca Pirituba</p>
+        <p>Entrada aberta para todos</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="section-container footer-bottom-content">
+        <p>
+          &copy; <span id="current-year"></span>
+          | Lucas da Luz Morais | WDD 131
+        </p>
+
+        <p>
+          Última modificação:
+          <span id="last-modified"></span>
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
